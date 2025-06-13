@@ -35,7 +35,7 @@ Alertas por interacciones medicamentosas.
 Generación de reportes clínicos automatizados.
 Integración con sistemas HIS (Hospital Information System).
 
-📞 Contacto y Autores
+📞 Autor
 Desarrollado por:
 Aracely Zubieta
 
