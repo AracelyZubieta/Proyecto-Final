@@ -5,27 +5,20 @@ Desarrollado por:
 Aracely Zubieta
 Ingrid Cruz
 Joseph Iquize
-🎯 Objetivo del Proyecto
-Objetivo General
-
-Desarrollar un prototipo de centrífuga que combine en un solo equipo las funciones de una microcentrífuga y una macro centrífuga. Utilizando tecnologías de impresión 3D y componentes electrónicos accesibles en Bolivia.
-Objetivos especificos
-
--Diseñar y fabricar un prototipo funcional de centrífuga macro y micro utilizando materiales disponibles localmente. 
-
--Implementar un sistema de control de velocidad utilizando motores paso a paso, permitiendo un control preciso de la velocidad de rotación en ambas versiones de la centrífuga. 
-
--Construir y ensamblar las partes del prototipo mediante impresión 3D, optimizando los costos de fabricación y mejorando la precisión de los componentes como la carcasa, los soportes y el rotor. 
-
--Realizar pruebas de funcionamiento para evaluar la eficiencia de la separación de muestras en función de su volumen y velocidad de rotación. 
+Introduccion
+El presente anteproyecto tiene como objetivo el desarrollo de un prototipo funcional de una centrifuga que permita realizar separaciones de sólidos y líquidos es una de las técnicas más utilizadas en los laboratorios clínicos, biomédicos y de investigación, pues permite la separación de componentes de una muestra mediante la aplicación de la fuerza centrífuga. 
 🧩 Justificación
 En los hospitales y laboratorios, donde los recursos humanos y tecnológicos son limitados es necesario buscar alternativas para cumplir sus funciones,el proyecto busca ofrecer una solución práctica y económica al combinar en un solo equipo las funciones de microcentrífuga y macro centrífuga. De esta forma se reduce el costo de adquisición, el espacio requerido y el mantenimiento, facilitando su uso en laboratorios pequeños, hospitales de segundo nivel y entornos educativos, donde los recursos suelen ser limitados. 
 🏥 Alcance
-El alcance del proyecto comprende el diseño, desarrollo, construcción y validación funcional de un prototipo de centrífuga híbrida capaz de operar como micro y macrocéntrifuga, incluyendo el modelado mecánico de la carcasa, soportes y rotores mediante software CAD; la fabricación de los componentes estructurales mediante impresión 3D; la integración de un sistema de control basado en un sistema de comunicacion maestro esclavo para regular la velocidad de rotación; la selección e instalación de motores, electrónica y elementos de seguridad como sensores d etemperatura; y la realización de pruebas de funcionamiento para evaluar estabilidad, eficiencia de separación y comportamiento mecánico en distintas condiciones de carga. El proyecto se limita al desarrollo de un prototipo funcional con fines académicos y de validación conceptual
+El alcance del proyecto comprende el diseño, desarrollo, construcción y validación funcional de un prototipo de centrífuga híbrida capaz de operar como micro y macrocéntrifuga, incluyendo el modelado mecánico de la carcasa, soportes y rotores mediante software CAD; la fabricación de los componentes estructurales mediante impresión 3D; la integración de un sistema de control esclavo para regular la velocidad de rotación
 
-📚 Fundamentación Técnica
-Seguridad: Los sensores de temperatura son para controlar el estado delos componentes dado que se trbaaja con componentes como la bateria Lipo 
+📚 Tecnologías utilizadas
+Seguridad: Los sensores de temperatura son para controlar el estado de los componentes dado que se trabaaja con componentes como la bateria Lipo 
 Sistemas de comunicación:El sistema emplea una arquitectura de comunicación sencilla y eficiente basada en tres canales principales. El sensor BME280 utiliza la interfaz I²C, permitiendo la transmisión de datos ambientales (temperatura y presión) mediante un bus digital de dos líneas que reduce el cableado y facilita la integración con el microcontrolador. La medición de la velocidad real del rotor se realiza mediante un encoder incremental, cuya señal se recibe a través de entradas digitales por pulsos en los canales A y B, lo que permite obtener la frecuencia de giro y detectar variaciones dinámicas en las RPM. Finalmente, se utiliza comunicación serial para monitorear valores, registrar datos o realizar configuraciones durante la etapa de pruebas y validación del prototipo. Esta combinación de protocolos permite un sistema de control estable, de rápida respuesta y fácilmente ampliable.
+
+Diagrama de funcionamiento
+
+<img width="518" height="349" alt="image" src="https://github.com/user-attachments/assets/4e505761-be3d-4e30-b7c2-da0b6e814951" />
 
 
 Componentes 
@@ -47,8 +40,19 @@ Adaptabilidad:
 Rotor intercambiable: Compatible con tubos de 0.2 ml a 50 ml, gracias a adaptadores.
 Energía recargable con baterías.
 Seguridad:
-Sistema de bloqueo de tapa durante el funcionamiento.
 Protección contra desequilibrio y sobrecarga.
 Sistema de ventilación para evitar sobrecalentamiento.
-
-
+ Roles Asignados :
+ Aracely Melva: Modularizacion del Proyecto,Revision de piezas no electronicas, revisor de codigo de sensores
+Joseph Iquize: Revision de componentes escenciales(MotorBrushless), Evaluacion de costos, Pruebas Fisicas
+Ingrid Cruz: Simulaciones de diseño , Revision de tecnologica
+Avances:
+-Revision de los parametros que se debe cumplir con el proyecto 
+-Evaluacion de tecnologias necesarias
+2do avance
+-Seleccion de Materiales
+-Primeras pruebas de funcionamiento 
+3er Avance 
+-Diseño de la placa en kicad
+-Puesta en funcionamiento de los compontes(Motores, sensores)
+-Mediciones y elaboracion del disñeo de la carcasa y piezas no mecanicas 
